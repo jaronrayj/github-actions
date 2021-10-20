@@ -2,6 +2,7 @@ name: Lint check
 on: [push]
 jobs:
   build:
+    name: Lint Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,4 +11,4 @@ jobs:
         with:
           node-version: "12"
       - run: yarn install
-      - run: yarn lint
+      - run: yarn test
