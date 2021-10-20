@@ -1,10 +1,14 @@
-name: Lint Runner
+name: Lint check
 on: [push]
 jobs:
   build:
+    name: Lint Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.3.0
+      - name: Test using Node.js
+        uses: actions/setup-node@v1
         with:
-          cmd: lint # will run `yarn lint` command
+          node-version: "12"
+      - run: yarn install
+      - run: yarn lint
