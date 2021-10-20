@@ -1,8 +1,7 @@
-name: Lint check
+name: Jest check
 on: [push]
 jobs:
   build:
-    name: Lint Runner
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
