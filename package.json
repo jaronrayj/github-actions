@@ -16,7 +16,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "react-scripts start"
+        "lint": "prettier --check 'src/**/**/**/**/*.{js,jsx}' && eslint src"
     },
     "eslintConfig": {
         "extends": [
